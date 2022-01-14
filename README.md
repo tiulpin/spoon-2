@@ -2,6 +2,7 @@
 [![GHA tests Workflow Status](https://github.com/INRIA/spoon/actions/workflows/tests.yml/badge.svg)](https://github.com/INRIA/spoon/actions/workflows/tests.yml)
 [![Coverage Status](https://coveralls.io/repos/INRIA/spoon/badge.png)](https://coveralls.io/r/INRIA/spoon)
 [![Maintainability Rating](https://sonarqube.ow2.org/api/project_badges/measure?project=fr.inria.gforge.spoon%3Aspoon-core&metric=sqale_rating)](https://sonarqube.ow2.org/dashboard?id=fr.inria.gforge.spoon%3Aspoon-core)
+[![Qodana](https://github.com/INRIA/spoon/actions/workflows/code_scanning.yml/badge.svg)](https://github.com/INRIA/spoon/actions/workflows/code_scanning.yml)
 
 # Spoon
 

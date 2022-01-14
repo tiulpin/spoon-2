@@ -1,0 +1,25 @@
+name: Qodana
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - master
+      - 'releases/*'
+jobs:
+  qodana:
+    runs-on: ubuntu-latest
+    env:
+      MAVEN_OPTS: -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false
+      QODANA_LINTER: jetbrains/qodana-jvm-community:2021.3
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Qodana Scan'
+        uses: JetBrains/qodana-action@v4.2.2
+        continue-on-error: true
+        with:
+          linter: ${{ env.QODANA_LINTER }}
+          inspected-dir: ./src/main/java # only main spoon project at first
+          baseline-include-absent: true
+          results-dir:  "${{ github.workspace }}/result"
+          use-annotations: true
